@@ -20,6 +20,7 @@
 @property (nonatomic,strong) NSMutableArray *vcArray;
 
 @property (nonatomic,strong) PageSegmentView *segmentView;
+
 @end
 
 @implementation ViewController
@@ -27,7 +28,7 @@
 - (PageSegmentView *)segmentView{
     
     if (!_segmentView) {
-        self.segmentView = [[PageSegmentView alloc] initWithNameArray:@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"]];
+        self.segmentView = [[PageSegmentView alloc] initWithNameArray:@[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7"]];
         _segmentView.defaultColor = [UIColor blueColor];
         _segmentView.selectColor = [UIColor cyanColor];
         _segmentView.lineColor = [UIColor grayColor];
@@ -77,9 +78,7 @@
     [self addChildViewController:self.pageViewController];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     [self.view addSubview:self.pageViewController.view];
-        
     });
-    // Do any additional setup after loading the view.
 }
 
 -(void)segmenntView:(PageSegmentView *)seView didClickWithIndex:(NSInteger)index{
