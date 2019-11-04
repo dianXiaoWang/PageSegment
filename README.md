@@ -1,4 +1,5 @@
 # UIPageViewController
+![](https://github.com/dianXiaoWang/PageSegment/blob/master/SegmentView.gif)
 ### 使用
 ```
 创建UIPageViewController
